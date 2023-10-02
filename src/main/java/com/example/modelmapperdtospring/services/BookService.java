@@ -57,6 +57,7 @@ public class BookService {
             return modelMapper.map(bookUpdated, BookDto.class);
         }
     }
+
     public BookDto deleteBookById(long id){
         if (bookRepo.findById(id).isEmpty()){
             throw new RuntimeException("no such book found to be deleted by this id: "+id );
